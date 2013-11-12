@@ -1,0 +1,54 @@
+﻿@model Website.Models.Invitation
+
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel invitation">
+            <h3>@Language.YourInvitation</h3>
+                <div class="row">
+                    <div class="large-5 columns">
+                        <label class="right inline for-readonly">
+                            @Language.InvitationFor
+                        </label>
+                    </div>
+                    <div class="large-7 columns">
+                        <p class="control">
+                            @Model.FullName
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-5 columns">
+                        <label class="right inline">
+                            @Language.WillYouBeAttending
+                        </label>
+                    </div>
+                    <div class="large-7 columns">
+                        <div class="toggle switch switch-2 foundry" onclick="" style="width: 120px">
+                            <input type="radio" id="attending" name="isattending" value="true" disabled="disabled" checked="@(Model.IsAttending == true)">
+                            <label for="attending" onclick="">@Language.Yes</label>
+
+                            <input type="radio" id="not-attending" name="isattending" value="false" disabled="disabled" checked="@(Model.IsAttending != true)">
+                            <label for="not-attending" onclick="">@Language.No</label>
+        
+                            <a class="slide-button"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="large-5 columns">
+                        <label class="right inline for-readonly">
+                            @Language.HowManyWillYouBe
+                        </label>
+                    </div>
+                    <div class="large-7 columns">
+                        <p class="control">
+                            @Model.Guests
+                        </p>
+                    </div>
+                </div>
+               
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿
+<div class="row">
+@using (Html.BeginForm("Check", "Invitations", FormMethod.Post, new { @class = "login" }))
+{
+    <div class="large-6 large-offset-3 small-12 columns">
+        <div class="row collapse">
+            <p>@Language.EnterInviteCode</p>
+        </div>
+        <div class="row collapse">
+            <div class="small-10 columns">
+                <input type="text" name="id" class="large textbox @(ViewBag.Error ? "error" : "")">
+                @if (ViewBag.Error)
+                {
+                    <small class="error">@Language.InvalidCode</small>
+                }
+            </div>
+            <div class="small-2 columns">
+                <input type="submit" value="Go" class="large button"/>
+            </div>
+        </div>
+        <div class="row collapse">
+        <p class="text-small">
+            @Language.NoInviteCode
+                <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#115;&#104;&#101;&#101;&#116;&#097;&#108;&#097;&#110;&#100;&#108;&#097;&#117;&#114;&#101;&#110;&#116;&#046;&#099;&#111;&#109;">@Language.ContactUs</a>.
+        </p>
+        </div>
+    </div>
+}
+</div>

@@ -1,0 +1,183 @@
+﻿@media only screen
+{
+    /* Switch with 3 items */
+    .switch.switch-3 label,
+    .switch.switch-3 .slide-button {
+        width: 33.3%;
+    }
+
+    .switch.switch-3 input:checked:nth-of-type(2) ~ .slide-button {	
+        left: 33.3%;
+    }
+
+    .switch.switch-3 input:checked:last-of-type ~ .slide-button {
+        left: 66.7%;
+    }
+    
+    /* Switch with 4 items */
+    .switch.switch-4 label,
+    .switch.switch-4 .slide-button {
+        width: 25%;
+    }
+
+    .switch.switch-4 input:checked:nth-of-type(2) ~ .slide-button {	
+        left: 25%;
+    }
+    
+    .switch.switch-4 input:checked:nth-of-type(3) ~ .slide-button {	
+        left: 50%;
+    }
+
+    .switch.switch-4 input:checked:last-of-type ~ .slide-button {
+        left: 75%;
+    }
+    
+    /* Switch with 5 items */
+    .switch.switch-5 label,
+    .switch.switch-5 .slide-button {
+        width: 20%;
+    }
+
+    .switch.switch-5 input:checked:nth-of-type(2) ~ .slide-button {	
+        left: 20%;
+    }
+    
+    .switch.switch-5 input:checked:nth-of-type(3) ~ .slide-button {	
+        left: 40%;
+    }
+    
+    .switch.switch-5 input:checked:nth-of-type(4) ~ .slide-button {	
+        left: 60%;
+    }
+
+    .switch.switch-5 input:checked:last-of-type ~ .slide-button {
+        left: 80%;
+    }
+    /* Switch with 6 items */
+    .switch.switch-6 label,
+    .switch.switch-6 .slide-button {
+        width: 16.6%;
+    }
+
+    .switch.switch-6 input:checked:nth-of-type(2) ~ .slide-button {	
+        left: 16.6%;
+    }
+    
+    .switch.switch-6 input:checked:nth-of-type(3) ~ .slide-button {	
+        left: 33.3%;
+    }
+    
+    .switch.switch-6 input:checked:nth-of-type(4) ~ .slide-button {	
+        left: 50%;
+    }
+    
+    .switch.switch-6 input:checked:nth-of-type(5) ~ .slide-button {	
+        left: 66.6%;
+    }
+
+    .switch.switch-6 input:checked:last-of-type ~ .slide-button {
+        left: 83.4%;
+    }
+
+    /* Switch with 7 items */
+    .switch.switch-7 label,
+    .switch.switch-7 .slide-button {
+        width: 14.285714285714%;
+    }
+
+    .switch.switch-7 input:checked:nth-of-type(2) ~ .slide-button {	
+        width: 14.285714285714%;
+    }
+    
+    .switch.switch-7 input:checked:nth-of-type(3) ~ .slide-button {	 
+        left: 28.571428571429%;
+    }
+    
+    .switch.switch-7 input:checked:nth-of-type(4) ~ .slide-button {	
+        left: 42.857142857143%;
+    }
+    
+    .switch.switch-7 input:checked:nth-of-type(5) ~ .slide-button {	
+        left: 57.142857142857%;
+    }
+    
+    .switch.switch-7 input:checked:nth-of-type(6) ~ .slide-button {	
+        left: 71.428571428571%;
+    }
+
+    .switch.switch-7 input:checked:last-of-type ~ .slide-button {
+        left: 85.714285714286%;
+    }
+
+    /* Switch with 8 items */
+    .switch.switch-8 label,
+    .switch.switch-8 .slide-button {
+        width: 12.5%;
+    }
+
+    .switch.switch-8 input:checked:nth-of-type(2) ~ .slide-button {	
+        width: 12.5%;
+    }
+    
+    .switch.switch-8 input:checked:nth-of-type(3) ~ .slide-button {	 
+        left: 25%;
+    }
+    
+    .switch.switch-8 input:checked:nth-of-type(4) ~ .slide-button {	
+        left: 37.5%;
+    }
+    
+    .switch.switch-8 input:checked:nth-of-type(5) ~ .slide-button {	
+        left: 50%;
+    }
+    
+    .switch.switch-8 input:checked:nth-of-type(6) ~ .slide-button {	
+        left: 62.5%;
+    }  
+    
+    .switch.switch-8 input:checked:nth-of-type(7) ~ .slide-button {	
+        left: 75%;
+    }
+
+    .switch.switch-8 input:checked:last-of-type ~ .slide-button {
+        left: 87.5%;
+    }
+
+    /* Switch with 9 items */
+    .switch.switch-9 label,
+    .switch.switch-9 .slide-button {
+        width: 11.1%;
+    }
+
+    .switch.switch-9 input:checked:nth-of-type(2) ~ .slide-button {	
+        width: 11.1%;
+    }
+    
+    .switch.switch-9 input:checked:nth-of-type(3) ~ .slide-button {	 
+        left: 22.2%;
+    }
+    
+    .switch.switch-9 input:checked:nth-of-type(4) ~ .slide-button {
+        left: 33.3%;
+    }
+    
+    .switch.switch-9 input:checked:nth-of-type(5) ~ .slide-button {	
+        left: 44.4%;
+    }
+    
+    .switch.switch-9 input:checked:nth-of-type(6) ~ .slide-button {	
+        left: 55.5%;
+    }  
+    
+    .switch.switch-9 input:checked:nth-of-type(7) ~ .slide-button {	
+        left: 66.6%;
+    }
+    
+    .switch.switch-9 input:checked:nth-of-type(8) ~ .slide-button {	
+        left: 77.7%;
+    }
+
+    .switch.switch-9 input:checked:last-of-type ~ .slide-button {
+        left: 88.8%;
+    }
+}

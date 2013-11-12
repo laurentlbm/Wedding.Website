@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Website.Models.Invitation>
+
+@Html.ActionLink("+ Add", "Create", null, new { @class = "button right" })
+<h2>Administration</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Invitation sent?</th>
+            <th>Invitation viewed?</th>
+            <th>Attending?</th>
+            <th>Guests (@Model.Sum(x => x.Guests))</th>
+            <th>Send invitation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var invitation in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(invitation.FullName, "Edit", new { id = invitation.Id })</td>
+                <td>@invitation.Email</td>
+                <td>
+                    @if (invitation.InvitationSentAt != null)
+                    {
+                        @invitation.InvitationSentAt.Value.ToOffset(TimeSpan.FromHours(-4))
+                    }
+                    else
+                    {
+                        <i class="icon-blocked alert"></i>
+                    }
+                </td>
+                <td>
+                    @if (invitation.LastViewedAt != null)
+                    {
+                        @invitation.LastViewedAt.Value.ToOffset(TimeSpan.FromHours(-4))
+                    }
+                    else
+                    {
+                        <span title="Not viewed yet">...</span>
+                    }
+                </td>
+                <td>
+                    @if (invitation.IsAttending == null)
+                    {
+                        <span title="Awaiting answer">...</span>
+                    }
+                    else if (invitation.IsAttending == true)
+                    {
+                        <i class="icon-checkmark-circle success"></i>
+                    }
+                    else
+                    {
+                        <i class="icon-blocked alert"></i>
+                    }
+                    
+                    @if (!string.IsNullOrWhiteSpace(invitation.Note))
+                    {
+                        <i class="icon-chat-3" data-dropdown="note-@invitation.Id" title="@invitation.Note"></i>
+                        <div id="note-@invitation.Id" class="f-dropdown content" data-dropdown-content>
+                            <p>@invitation.Note</p>
+                        </div>
+                    }
+                </td>
+                <td>
+                    <strong>@(invitation.Guests == null ? "?" : invitation.Guests.Value.ToString())</strong> 
+                    / @invitation.AllowedGuests
+                </td>
+                <td>
+                    @if (invitation.InvitationSentAt != null)
+                    {
+                        <a href="@Url.Action("Send", new {id = invitation.Id})" class="small secondary button">Resend invitation</a>
+                    }
+                    else
+                    {    
+                        <a href="@Url.Action("Send", new { id = invitation.Id })" class="small button">Send invitation</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section scripts
+{
+    @Scripts.Render("~/js/app")
+}

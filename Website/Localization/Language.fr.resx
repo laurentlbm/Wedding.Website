@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddToCalendar" xml:space="preserve">
+    <value>Ajouter à Outlook (ou autre)</value>
+  </data>
+  <data name="AddToGoogleCalendar" xml:space="preserve">
+    <value>Ajouter à Google Calendar</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>nous joindre</value>
+  </data>
+  <data name="InvitationEmailBody" xml:space="preserve">
+    <value>Bonjour {InformalName},
+
+C'est avec joie que nous vous invitons à assister à notre mariage qui aura lieu le 24 août à 17h00. 
+
+Une invitation détaillée est disponible sur notre site Internet : http://www.sheetaletlaurent.com/invitations/{Id}
+Un formulaire vous permettra de nous répondre directement à partir du site.
+
+Merci de bien vouloir nous confirmer votre présence avant le 31 juillet 2013.
+
+Nous espérons que vous pourrez y être !
+
+Laurent et Sheetal</value>
+  </data>
+  <data name="EmailConfirmedNo" xml:space="preserve">
+    <value>Bonjour,
+
+Merci pour avoir répondu à notre invitation pour notre mariage.  Nous regrettons que vous ne serez pas parmi nous.
+
+Nous vous invitons à nous écrire en cas d’erreur ou pour toute autre question.
+
+Cordialement,
+
+Sheetal et Laurent</value>
+  </data>
+  <data name="EmailConfirmedYes" xml:space="preserve">
+    <value>Bonjour,
+
+Merci d’avoir confirmé votre présence ({Guests} personne(s)) à notre mariage. C’est un plaisir de vous compter parmi nos invités.
+
+Nous vous invitons à nous écrire en cas de question ou besoin spécifique.
+
+À bientôt !
+
+Sheetal et Laurent</value>
+  </data>
+  <data name="EmailPhotosBody" xml:space="preserve">
+    <value>Bonjour,
+
+Plusieurs d'entre vous ont exprimé la volonté de voir les photos qui ont été prises durant la soirée. Nous avons donc créé un site pour les visionner : http://photos.lebeaumartin.com/Wedding
+
+Le site contient actuellement 11 (!!) albums photo, catégorisés par photographe. Plus précisément, il y a huit albums de photos prises au cours de la soirée, un album de photos prises pendant l'installation, avant le début de la soirée, et deux albums de photos prises la soirée avant le mariage (la soirée de henné, Mendhi).
+
+Un ou deux autres albums seront ajoutés au courant des prochains jours avec les photos prises par l'oncle de Sheetal, Naresh.
+
+Cordialement,
+
+Sheetal et Laurent</value>
+  </data>
+  <data name="EmailPhotosSubject" xml:space="preserve">
+    <value>Photos de la soirée</value>
+  </data>
+  <data name="InvitationEmailSubject" xml:space="preserve">
+    <value>Invitation à notre mariage</value>
+  </data>
+  <data name="EnterInviteCode" xml:space="preserve">
+    <value>Veuillez entrer votre numéro d'invitation :</value>
+  </data>
+  <data name="ForMoreInformation" xml:space="preserve">
+    <value>Pour en savoir plus, n'hésitez pas à</value>
+  </data>
+  <data name="HowManyWillYouBe" xml:space="preserve">
+    <value>Combien serez-vous ?</value>
+  </data>
+  <data name="IntroHtml" xml:space="preserve">
+    <value>&lt;p class="lead"&gt;
+    Votre amour et votre amitié nous ont permis de devenir les personnes que nous sommes aujourd'hui.
+&lt;br&gt;
+    Nos parents se joignent à nous pour vous inviter à partager notre bonheur
+    et notre amour
+&lt;br&gt;
+    en ce jour où les deux meilleurs amis au monde que nous sommes, s'épouseront.
+&lt;br&gt;
+    Un succulent buffet et une grande fête succéderont à la cérémonie !
+&lt;br&gt;
+    Joignez-vous à nous pour cette célébration de l'amour, de l'amitié, de la joie et de la famille.
+&lt;/p&gt;
+&lt;p&gt;
+    &amp;mdash; Laurent &amp;amp; Sheetal
+&lt;/p&gt;</value>
+  </data>
+  <data name="InvalidCode" xml:space="preserve">
+    <value>Le numéro n'est pas valide</value>
+  </data>
+  <data name="InvitationFor" xml:space="preserve">
+    <value>Invitation pour :</value>
+  </data>
+  <data name="MapTitle" xml:space="preserve">
+    <value>Comment s'y rendre ?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="NoInviteCode" xml:space="preserve">
+    <value>Si vous avez perdu votre numéro d'invitation, veuillez </value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Note :</value>
+  </data>
+  <data name="PhotoAlt" xml:space="preserve">
+    <value>Le couple</value>
+  </data>
+  <data name="ReminderBody" xml:space="preserve">
+    <value>Bonjour,
+
+Un court message pour vous rappeler que notre mariage aura lieu la semaine prochaine, samedi le 24 août. Vous êtes attendus pour 17h ; la cérémonie débutera bientôt après.
+
+L’adresse :
+Le Manoir
+5319 avenue Notre-Dame-de-Grâce
+Montréal, Québec
+H4A 1L2 Canada 
+
+Google Maps: http://goo.gl/fA4zVc
+
+Nous avons très hâte de vous voir !
+
+Cordialement,
+
+Sheetal et Laurent</value>
+  </data>
+  <data name="ReminderSubject" xml:space="preserve">
+    <value>Rappel : Mariage la semaine prochaine !</value>
+  </data>
+  <data name="RsvpDeadline" xml:space="preserve">
+    <value>Merci de bien vouloir nous confirmer votre présence &lt;strong&gt;avant le 31 juillet 2013.&lt;/strong&gt;</value>
+  </data>
+  <data name="Saved" xml:space="preserve">
+    <value>Votre réponse a été envoyée, merci !</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Envoyer</value>
+  </data>
+  <data name="SwitchLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="SwitchLanguageUrl" xml:space="preserve">
+    <value>http://www.sheetalandlaurent.com</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Sheetal &amp; Laurent se marient !</value>
+  </data>
+  <data name="ViewLargerMap" xml:space="preserve">
+    <value>Agrandir</value>
+  </data>
+  <data name="WhenHtml" xml:space="preserve">
+    <value>Samedi, le&lt;br /&gt;
+&lt;span class="huge label"&gt;24&lt;/span&gt;&lt;br /&gt;
+août 2013 à &lt;strong&gt;17:00&lt;/strong&gt;</value>
+  </data>
+  <data name="WhenTitle" xml:space="preserve">
+    <value>Quand ?</value>
+  </data>
+  <data name="WhereHtml" xml:space="preserve">
+    <value>&lt;strong&gt;Le Manoir&lt;/strong&gt;&lt;br /&gt;
+5319 avenue Notre-Dame-de-Grâce&lt;br /&gt;
+Montréal, Québec&lt;br /&gt;
+H4A 1L2 Canada</value>
+  </data>
+  <data name="WhereTitle" xml:space="preserve">
+    <value>Où ?</value>
+  </data>
+  <data name="WillYouBeAttending" xml:space="preserve">
+    <value>Serez-vous présents ?</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="YourInvitation" xml:space="preserve">
+    <value>Votre invitation</value>
+  </data>
+</root>

@@ -1,0 +1,124 @@
+﻿@model Website.Models.Invitation
+
+<h2>@Html.ActionLink("< Administration", "Index")</h2>
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert-box success radius">
+        @ViewBag.SuccessMessage
+        <a href="#" class="close">&times;</a>
+    </div>
+}
+
+<section class="row">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.Id)
+        
+        <div class="panel large-11 large-centered columns">
+            <h2>Edit invitation</h2>
+            
+            @Html.ValidationSummary(true, "The form contains errors. Please correct them and submit again.", new { @class = "alert-box alert"})
+
+            <div class="row">
+                <div class="large-3 columns">
+                    @Html.LabelFor(m => m.FullName, new {@class = "right inline"})
+                </div>
+                <div class="large-9 columns">
+                    @Html.TextBoxFor(m => m.FullName)
+                    @Html.ValidationMessageFor(m => m.FullName)
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="large-3 columns">
+                    @Html.LabelFor(m => m.InformalName, new {@class = "right inline"})
+                </div>
+                <div class="large-9 columns">
+                    @Html.TextBoxFor(m => m.InformalName)
+                    @Html.ValidationMessageFor(m => m.InformalName)
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="large-3 columns">
+                    @Html.LabelFor(m => m.Email, new {@class = "right inline"})
+                </div>
+                <div class="large-9 columns">
+                    @Html.TextBoxFor(m => m.Email)
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="large-3 columns">
+                    @Html.LabelFor(m => m.GuestOf, new {@class = "right inline"})
+                </div>
+                <div class="large-9 columns">
+                    @Html.DropDownListFor(m => m.GuestOf, new [] { new SelectListItem { Text = "Laurent", Value = "Laurent" }, new SelectListItem { Text = "Sheetal", Value = "Sheetal" } })
+                    @Html.ValidationMessageFor(m => m.GuestOf)
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="large-3 columns">
+                    @Html.LabelFor(m => m.LanguageCode, new {@class = "right inline"})
+                </div>
+                <div class="large-9 columns">
+                    @Html.DropDownListFor(m => m.LanguageCode, new [] { new SelectListItem { Text = "English", Value = "en" }, new SelectListItem { Text = "Français", Value = "fr" } })
+                    @Html.ValidationMessageFor(m => m.LanguageCode)
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="large-3 columns">
+                    @Html.LabelFor(m => m.AllowedGuests, new {@class = "right inline"})
+                </div>
+                <div class="large-9 columns">
+                    @Html.TextBoxFor(m => m.AllowedGuests)
+                    @Html.ValidationMessageFor(m => m.AllowedGuests)
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="large-3 columns">
+                    @Html.LabelFor(m => m.IsAttending, new {@class = "right inline"})
+                </div>
+                <div class="large-9 columns">
+                    @Html.DropDownListFor(m => m.IsAttending, new [] { new SelectListItem { Text = "No answer", Value = "" }, new SelectListItem { Text = "No", Value = "false" }, new SelectListItem { Text = "Yes", Value = "true" } })
+                    @Html.ValidationMessageFor(m => m.IsAttending)
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="large-3 columns">
+                    @Html.LabelFor(m => m.Guests, new {@class = "right inline"})
+                </div>
+                <div class="large-9 columns">
+                    @Html.TextBoxFor(m => m.Guests)
+                    @Html.ValidationMessageFor(m => m.Guests)
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="large-3 columns">
+                    @Html.LabelFor(m => m.Note, new {@class = "right inline"})
+                </div>
+                <div class="large-9 columns">
+                    @Html.TextAreaFor(m => m.Note)
+                    @Html.ValidationMessageFor(m => m.Note)
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="large-9 large-offset-3 columns form-actions">
+                    <input type="submit" value="Save" class="button" />
+                </div>
+            </div>
+        </div>
+    }
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/js/app")
+}

@@ -1,0 +1,90 @@
+﻿@model Website.Models.Invitation
+
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel invitation">
+            <h3>@Language.YourInvitation</h3>
+            <p>@Html.Raw(Language.RsvpDeadline)</p>
+            @using (Html.BeginForm())
+            {
+                if (ViewBag.SuccessMessage != null)
+                {
+                    <div class="alert-box success radius">
+                        @ViewBag.SuccessMessage
+                        <a href="#" class="close">&times;</a>
+                    </div>
+                }
+                <div class="row">
+                    <div class="large-5 columns">
+                        <label class="right inline for-readonly">
+                            @Language.InvitationFor
+                        </label>
+                    </div>
+                    <div class="large-7 columns">
+                        <p class="control">
+                            @Model.FullName
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-5 columns">
+                        <label class="right inline">
+                            @Language.WillYouBeAttending
+                        </label>
+                    </div>
+                    <div class="large-7 columns">
+                        <div class="toggle switch switch-2 foundry" onclick="" style="width: 120px">
+                            <input type="radio" id="attending" name="isattending" value="true" checked="@(Model.IsAttending == true)">
+                            <label for="attending" onclick="">@Language.Yes</label>
+
+                            <input type="radio" id="not-attending" name="isattending" value="false" checked="@(Model.IsAttending != true)">
+                            <label for="not-attending" onclick="">@Language.No</label>
+        
+                            <a class="slide-button"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="large-5 columns">
+                        <label class="right inline">
+                            @Language.HowManyWillYouBe
+                        </label>
+                    </div>
+                    <div class="large-7 columns">
+                    @{
+                        int widthPerChoice = Model.AllowedGuests > 5 ? 30 : 60;
+                        int totalWidth = widthPerChoice * Model.AllowedGuests;
+                    }
+                        <div class="switch switch-@Model.AllowedGuests foundry blue" onclick="" style="width: @(totalWidth)px">
+                            @for (int i = 1; i <= Model.AllowedGuests; ++i)
+                            {
+                                <input type="radio" id="@i-guest" name="guests" value="@i" checked="@(Model.Guests == i || (Model.Guests == null && i == Model.AllowedGuests))">
+                                <label for="@i-guest" onclick="">@i</label>
+                            }
+                            <span class="slide-button"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="large-5 columns">
+                        <label for="note" class="right inline">
+                            @Language.Note
+                        </label>
+                    </div>
+                    <div class="large-7 columns">
+                        <textarea name="note" id="note" maxlength="1000">@Model.Note</textarea>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="large-7 large-offset-5 columns">
+                        <input type="submit" value="@Language.Submit" class="button no-margin"/>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

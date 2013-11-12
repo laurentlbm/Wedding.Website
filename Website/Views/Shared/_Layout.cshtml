@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="@CultureHelper.GetCurrentNeutralCulture()" class="lang-@CultureHelper.GetCurrentNeutralCulture()">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>@Language.Title</title>
+    
+    @Styles.Render("~/css/global")
+    
+    <script type="text/javascript" src="//use.typekit.net/gwh3jwf.js"></script>
+    <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+
+    <!-- IE Fix for HTML5 Tags -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <link href="~/content/foundation-ie8.min.css" rel="stylesheet"/>
+    <![endif]-->
+    <!--[if lte IE 7]>
+        @Scripts.Render("~/js/lte-ie7")
+    <![endif]-->
+</head>
+    <body>
+        <nav class="top-bar">
+            <ul class="right">
+                <li><a href="@Language.SwitchLanguageUrl@ViewContext.HttpContext.Request.Path">@Language.SwitchLanguage</a></li>
+            </ul>
+        </nav>
+        
+        <div id="wrapper">
+            <header class="row">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div data-picture data-alt="@Language.Title">
+                            <div data-src="@Url.Content("~/images/title.small." + CultureHelper.GetCurrentNeutralCulture() + ".png")"></div>
+                            <div data-src="@Url.Content("~/images/title." + CultureHelper.GetCurrentNeutralCulture() + ".png")" data-media="(min-width: 600px)"></div>
+                                
+                            <!--[if (lt IE 9) & (!IEMobile)]>
+                                <div data-src="@Url.Content("~/images/title." + CultureHelper.GetCurrentNeutralCulture() + ".png")"></div>
+                            <![endif]-->
+                            <noscript>
+                                <img src="@Url.Content("~/images/title.small." + CultureHelper.GetCurrentNeutralCulture() + ".png")" alt="@Language.Title">
+                            </noscript>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section id="content" class="row">
+                @RenderBody()
+            </section>
+        </div>
+        
+        <footer></footer>
+
+        @Scripts.Render("~/js/global")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

@@ -1,0 +1,94 @@
+﻿@model Website.Models.Invitation
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert-box success radius">
+        @ViewBag.SuccessMessage
+        <a href="#" class="close">&times;</a>
+    </div>
+}
+
+<div class="row" id="photo">
+    <div class="large-12 columns">
+        <div data-picture data-alt="@Language.PhotoAlt">
+            <div data-src="@Url.Content("~/images/sheetal-laurent.small.jpg")"></div>
+            <div data-src="@Url.Content("~/images/sheetal-laurent.jpg")" data-media="(min-width: 600px)"></div>
+                                
+            <!--[if (lt IE 9) & (!IEMobile)]>
+                <div data-src="@Url.Content("~/images/sheetal-laurent.jpg")"></div>
+            <![endif]-->
+            <noscript>
+                <img src="@Url.Content("~/images/sheetal-laurent.small.jpg")" alt="@Language.PhotoAlt">
+            </noscript>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="block text-center">
+            @* || ૐ શ્રી ગણેશાય નમઃ || *@
+            <img src="~/images/mantra.png?v=1" alt="Om Shri Ganeshaya Namah" class="mantra" />
+            @Html.Raw(Language.IntroHtml)
+        </div>
+    </div>
+</div>  
+@if (Model.IsAttending == null)
+{
+    Html.RenderPartial("_AnswerForm", Model);
+}
+else
+{
+    Html.RenderPartial("_AnswerDetails", Model);
+}
+
+<div class="row">
+    <div class="large-4 columns">
+        <div class="block">
+            <h3>
+                @Language.WhenTitle
+            
+            <small>
+                <a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=@(Url.Encode(Language.Title))&amp;dates=20130824T210000Z/20130825T060000Z&amp;details=&amp;location=Le%20Manoir%2C%205319%20avenue%20Notre-Dame-de-Gr%C3%A2ce%20Montr%C3%A9al%2C%20Qu%C3%A9bec%2C%20H4A%201L2%20Canada&amp;trp=true&amp;sprop=@(Url.Encode(Language.Title))&amp;sprop=name:http%3A%2F%2Fwww.sheetalandlaurent.com" title="@Language.AddToGoogleCalendar" class="button secondary tiny-padding" target="_blank">
+                    <i class="icon-google"></i>
+                </a>
+                <a href="~/event.@(CultureHelper.GetCurrentNeutralCulture()).ics" title="@Language.AddToCalendar" class="button secondary tiny-padding">
+                    <i class="icon-calendar"></i>
+                </a>
+            </small>
+            </h3>
+            <p>
+                @Html.Raw(Language.WhenHtml)
+            </p>
+        </div>
+        <div class="block">
+            <h3>@Language.WhereTitle</h3>
+            <p>
+                @Html.Raw(Language.WhereHtml)
+            </p>
+        </div>
+    </div>
+    <div class="large-8 columns">
+        <div class="block">
+            <h3>@Language.MapTitle</h3>
+            <div class="clearfix">
+                <div id="map-canvas">
+                    <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=@CultureHelper.GetCurrentNeutralCulture()&amp;geocode=&amp;q=Comit%C3%A9+Jeunesse+N.D.G+-+Centre+Le+Manoir,+Avenue+Notre+Dame+de+Grace,+Montreal,+QC&amp;aq=0&amp;oq=Le+manoir&amp;sll=45.480239,-73.623355&amp;sspn=0.026871,0.066047&amp;t=m&amp;ie=UTF8&amp;hq=comit%C3%A9+jeunesse+ndg+centre+le&amp;hnear=Avenue+du+Manoir,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec&amp;cid=12772937388529393806&amp;ll=45.477918,-73.615608&amp;spn=0.010532,0.018282&amp;z=15&amp;output=embed&amp;iwloc=near"></iframe>
+                </div>
+                <a href="https://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=@CultureHelper.GetCurrentNeutralCulture()&amp;geocode=&amp;q=Comit%C3%A9+Jeunesse+N.D.G+-+Centre+Le+Manoir,+Avenue+Notre+Dame+de+Grace,+Montreal,+QC&amp;aq=0&amp;oq=Le+manoir&amp;sll=45.480239,-73.623355&amp;sspn=0.026871,0.066047&amp;t=m&amp;ie=UTF8&amp;hq=comit%C3%A9+jeunesse+ndg+centre+le&amp;hnear=Avenue+du+Manoir,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec&amp;cid=12772937388529393806&amp;ll=45.477918,-73.615608&amp;spn=0.010532,0.018282&amp;z=15" target="_blank" class="tiny button secondary right no-margin">
+                    <i class="icon-expand"></i>&nbsp;&nbsp;@Language.ViewLargerMap
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel">
+            <p class="text-center">
+                @Language.ForMoreInformation <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#115;&#104;&#101;&#101;&#116;&#097;&#108;&#097;&#110;&#100;&#108;&#097;&#117;&#114;&#101;&#110;&#116;&#046;&#099;&#111;&#109;">@Language.ContactUs</a>.
+            </p>
+        </div>
+    </div>
+</div>

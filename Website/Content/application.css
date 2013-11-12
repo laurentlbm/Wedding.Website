@@ -1,0 +1,250 @@
+﻿body {
+    background-color: #392A53;
+    background-image: url(../images/pattern.png);
+}
+
+body,
+h1, h2, h3, h4, h5, h6 { font-family: "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+div#wrapper {
+    background-color: #fff;
+    background-image: url(../images/background.png);
+}
+
+a {
+    color: #658;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #87a;
+    text-decoration: none;
+}
+
+h2 { font-size: 1.8em; }
+
+h1, h2, h3, h4, h5, h6,
+.panel h2,
+.panel h3 {
+    color: #658;
+    font-weight: 300;
+}
+
+select {
+    font-size: 0.875em;
+    height: 2.3125em;
+}
+
+nav.top-bar { background-color: transparent; }
+
+nav.top-bar a {
+    color: white;
+    display: block;
+    font-size: 0.8125em;
+    font-weight: bold;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    text-decoration: none;
+    width: 100%;
+}
+
+nav.top-bar a:hover { text-decoration: underline; }
+
+header .row { padding: 30px 0; }
+
+header .row p { margin-bottom: 0; }
+
+.label { background-color: #0be; }
+
+header,
+section#content {
+    background: #fff;
+    border-left: 1px solid #dcf;
+    border-right: 1px solid #dcf;
+    padding: 0 20px;
+}
+
+section#content { min-height: 500px; }
+
+footer {
+    color: #fff;
+    height: 150px;
+}
+
+form.login { padding: 20% 0 40%; }
+
+form.login .button {
+    line-height: 3.125em;
+    margin-left: 5px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+form.login .large.textbox {
+    font-size: 1.25em;
+    height: 3.125em;
+}
+
+form.login input.error { margin: 0; }
+
+form.login small.error { margin-top: 0; }
+
+.form-actions { margin-top: 1em; }
+
+.button {
+    -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+    background-color: #5f448d;
+    border-color: #5f448d;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+    margin-bottom: 0;
+}
+
+.button:hover, .button:focus { background-color: #8365b5; }
+
+h3 small .button {
+    display: inline-block;
+    font-size: 1.05em;
+}
+
+.inverse {
+    background-color: #222;
+    color: #fff;
+}
+
+.tiny-padding {
+    padding: 0.21em 0.5em 0.25em;
+}
+
+.huge.label {
+    display: inline-block;
+    font-size: 4em;
+    font-weight: 300;
+    margin: 0.1em 0;
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+}
+
+label.for-readonly {
+    cursor: default;
+    line-height: 1.8285714285714;
+    padding: 0;
+}
+
+img.mantra {
+    margin: 1em auto 1em;
+    width: 400px;
+}
+
+p.lead {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+.block {
+    background-color: transparent;
+    border: 0;
+    border-top: 1px solid #edf;
+    margin-bottom: 1.5em;
+    padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }
+
+.no-margin { margin: 0; }
+
+.text-small { font-size: .875em; }
+
+@media only screen and (min-width: 48em) {
+    header h1 { font-size: 4em; }
+
+    .block { border: 0; }
+
+    section.content .row { border-bottom: 1px solid #dcf; }
+
+    section.content #photo.row { border-bottom: none; }
+}
+
+
+@media only screen and (max-width: 48em) {
+    p.control { text-align: center; }
+
+    .invitation p { margin-bottom: 0; }
+
+    .invitation label.right.inline {
+        margin: 1em 0 0;
+        text-align: center;
+    }
+
+    .invitation .toggle,
+    .invitation .switch { margin: 0 auto; }
+
+    .invitation .button { margin: 1.25em auto 0; }
+}
+
+@media (max-width: 768px) {
+    .block { padding: 1.25em 0 0; }
+
+    img.mantra { margin-top: 0; }
+}
+
+@media (max-width: 400px) {
+    img.mantra { width: 100%; }
+}
+
+@media only screen {
+    .toggle { margin-left: 0; }
+}
+
+
+    /* Status icons */
+
+i.alert { color: #c60f13; }
+
+i.success { color: #5da423; }
+
+i.info { color: #2ba6cb; }
+
+/* Error Handling */
+
+.alert-box.alert ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+input.input-validation-error,
+textarea.input-validation-error {
+    background-color: rgba(198, 15, 19, 0.1);
+    border-color: #c60f13;
+}
+
+input.input-validation-error:focus,
+textarea.input-validation-error:focus {
+    background: #fafafa;
+    border-color: #999999;
+}
+
+span.field-validation-error {
+    background: #c60f13;
+    color: white;
+    display: block;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-top: -1.3125em;
+    padding: 0.375em 0.25em;
+}
+
+select ~ span.field-validation-error {
+    margin-top: 0;
+}
